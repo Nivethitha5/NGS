@@ -16,7 +16,10 @@ gatk MergeBamAlignment \\
 gatk SortSam -I /data/sample1.sam -O /data/sample1_sorted.sam -SORT_ORDER coordinate
 
 # mark duplicates
-gatk SortSam -I /data/sample1.sam -O /data/sample1_sorted.sam -SORT_ORDER coordinate
+gatk MarkDuplicates\\
+-I /data/sample1.sorted.sam\\
+-O /data/markduplicates.sam\\
+-M /data/marked_dup_meterics.txt
 
 # BQSR
 # download the file 
