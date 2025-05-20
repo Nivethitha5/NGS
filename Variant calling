@@ -14,9 +14,9 @@ gatk SortSam -I bam_files/merged.bam -O bam_files/merged_sorted.bam -SORT_ORDER 
 
 # mark duplicates
 gatk MarkDuplicates \
-      I=bam_files/merged_sorted.bam \
-      O=bam_files/marked_duplicates.bam \
-      M=bam_files/marked_dup_metrics.txt
+      I=read_mapping/merged_sorted.bam \
+      O=read_mapping/marked_duplicates.bam \
+      M=read_mapping/marked_dup_metrics.txt
 
 # BQSR
 # download the file 
